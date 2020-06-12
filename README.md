@@ -5,7 +5,7 @@ The repository is contains algorithms in Python 2.0 split into two nodes. The vi
 ## Computer Pre-Check 
 The following repository is dependent on components that only work on Ubuntu. If your machine is running on macOS, download [Virtual Machine](https://www.virtualbox.org/) and [Ubuntu](https://ubuntu.com/download/desktop). If the speed of Ubuntu is slow, you need to allocate more RAM. 
 
-## Installation
+## Development Requirements
 We use the catkin build tools, NOT catkin_make. Please don't use catkin_make
 
 #### DVRK Components 
@@ -54,5 +54,19 @@ rosdep install --from-path src --ignore-src -r -y
 catkin build
 ```
 
-#### Running Vision Node 
-#### Running Autonomous Movement Node
+## Vision Node 
+The pipeline 
+The following are the steps to run the vision node in the system. Each step requires a new terminal tab or window.
+1. The roscore can be launched using the roscore executable:
+```
+roscore
+```
+2. Launch CoppeliaSim
+```
+cd /path/to/coppeliasim/root
+./coppeliaSim.sh 
+```
+3. In CoppeliaSim: File &#8594;
+## Autonomous Movement Node
+
+## Todo
