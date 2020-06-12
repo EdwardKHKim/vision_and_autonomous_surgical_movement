@@ -17,4 +17,7 @@ The vision node is dependent on the OpenCV (Open Source Computer Vision Library)
 1. Install OpenCV-Python in Ubuntu: https://docs.opencv.org/3.4/d2/de6/tutorial_py_setup_in_ubuntu.html
 
 #### Coppelia Simulation
-1. Download the [Coppelia Simulator](https://coppeliarobotics.com/downloads). 
+1. Download the [Coppelia Simulator](https://coppeliarobotics.com/downloads). Use the edu version with full features. Extract and cd into the root CoppeliaSim folder. 
+2. Copy the `libsimExtROSInterface.so` file from the `compiledRosPlugins` folder to the root CoppeliaSim Folder.
+
+This system uses `dVRK-training_pick&place.ttt` scene provided in [dvrk-vrep](https://github.com/unina-icaros/dvrk-vrep). The scene is readily available in CoppeliaSim. 
