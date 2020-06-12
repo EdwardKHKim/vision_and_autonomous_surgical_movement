@@ -57,8 +57,12 @@ catkin build
 #### What does this node do?
 The node is responsible for publishing Cartesian Coordinates in 2D of the centroid point of the object of interest.
 #### Function specifications
-- 
-
+- `__init__(self, hsv_ranges, desired_viewpoint)`: 
+- `PrepareImage(self, ros_image)`:
+- `FindContours(self, hsv, lower_range, upper_range)`:
+- `PublishPoints(self, frame, points, point_type)`:
+- `Centroids(self, ros_image, name)`:
+- `CSVToHSVRanges(features)`:
 #### Running Vision Node
 The following are the steps to run the vision node in the system. A new terminal can be a new terminal tab or window.
 1. In terminal, roscore can be launched using the roscore executable:
@@ -91,7 +95,11 @@ rosrun featurization vision.py
 #### What does this node do?
 The node is responsible for automation of PSM1 movement to the object of interest, pick up the object of interest, and place it in another location using direct Cartesian Coordinates in 3D inputs.
 #### Function specifications
-- 
+- `configure(self, robot_name)`:
+- `home(self)`:
+- `cartesian_move(self, value_x, value_y, value_z)`:
+- `open_jaw_ungrasp(self)`:
+- `close_jaw_grasp(self)`:
 #### Running Autonomous Movement Node
 1. In terminal, roscore can be launched using the roscore executable:
 ```
