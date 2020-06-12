@@ -1,5 +1,5 @@
 # Vision and Autonomous Surgical Movement
-
+The repository is part a project for the @autonomous surgical robotics 
 The repository contains algorithms in Python 2.0, split into two nodes. The vision node can recognize the object of interest using HSV values. The autonomous movement node can move the da Vinci surgical robot's PSM1 arm to the object of interest, pick up the object of interest, and move it to another location. The following diagram provides and overview of the system: 
 
 ## Computer Pre-Check 
