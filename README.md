@@ -125,6 +125,7 @@ cd vis_and_auto_mov_ws
 source devel/setup.bash
 rosrun ecm_controller movement.py
 ```
+9. In CoppeliaSim, the PSM1 arm will 
 ## Todo
 - The autonomous movement node should subscribe to a transformation node that 
 
