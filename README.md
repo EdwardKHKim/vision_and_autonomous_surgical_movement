@@ -1,5 +1,4 @@
 # Vision and Autonomous Surgical Movement
-The repository is part a project for the @autonomous surgical robotics 
 The repository contains algorithms in Python 2.0, split into two nodes. The vision node can recognize the object of interest using HSV values. The autonomous movement node can move the da Vinci surgical robot's PSM1 arm to the object of interest, pick up the object of interest, and move it to another location. The following diagram provides and overview of the system: 
 
 ## Computer Pre-Check 
@@ -58,6 +57,7 @@ catkin build
 #### What does this node do?
 The node 
 #### Function specifications
+- 
 #### Running Vision Node
 The following are the steps to run the vision node in the system. A new terminal can be a new terminal tab or window.
 1. In terminal, roscore can be launched using the roscore executable:
@@ -90,6 +90,7 @@ rosrun featurization vision.py
 #### What does this node do?
 The node 
 #### Function specifications
+- 
 #### Running Autonomous Movement Node
 1. In terminal, roscore can be launched using the roscore executable:
 ```
@@ -127,7 +128,7 @@ rosrun ecm_controller movement.py
 ```
 9. In CoppeliaSim, the PSM1 arm will 
 ## Todo
-- The autonomous movement node should subscribe to a transformation node that 
+- The autonomous movement node should subscribe to a transformation node that transforms the Cartesian Coordinates in 2D from the vision node to Cartesian Coordinates in 3D.
 
 ## Troubleshooting
 - When using a code editor (Visual Studio Code, IntelliJ IDEA...), error messages in import statements can be ignored.
