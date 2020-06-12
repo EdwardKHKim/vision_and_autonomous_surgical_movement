@@ -18,6 +18,8 @@ catkin init
 2. Download and compile the cisst libraries and SAW components for the dVRK, see the dVRK tutorial wiki: https://github.com/jhu-cisst/cisst/wiki/Compiling-cisst-and-SAW-with-CMake#13-building-using-catkin-build-tools-for-ros
 3. Download and compile dvrk-ros: https://github.com/jhu-dvrk/sawIntuitiveResearchKit/wiki/CatkinBuild
 
+ROS has multiple releases (Hydro, Indigo, Jade...), however, Melodic is the only release that works on macOS machines. 
+
 #### OpenCV 
 The vision node is dependent on the OpenCV (Open Source Computer Vision Library), an open source software library for computer vision and machine learning. 
 1. Install OpenCV-Python in Ubuntu: https://docs.opencv.org/3.4/d2/de6/tutorial_py_setup_in_ubuntu.html
@@ -29,15 +31,28 @@ The vision node is dependent on the OpenCV (Open Source Computer Vision Library)
 This system uses `dVRK-training_pick&place.ttt` scene provided in [dvrk-vrep](https://github.com/unina-icaros/dvrk-vrep). The scene is readily available in CoppeliaSim. 
 
 #### Vision and Autonomous Surgical Movement
-1. Create and initialize a catkin workspace named `vision_and_auto_mov_ws`.
+1. Create and initialize a catkin workspace named `vis_and_auto_mov_ws`.
 ```
-mkdir -p ~/vision_and_auto_mov_ws/src
-cd ~/vision_and_auto_mov_ws
+mkdir -p ~/vis_and_auto_mov_ws/src
+cd ~/vis_and_auto_mov_ws
 catkin init
 ```
 2. Clone this repository into `vision_and_auto_mov_ws`.
 ```
-cd ~/vision_and_auto_mov_ws/src
-git clone 
+cd ~/vis_and_auto_mov_ws/src
+git clone https://github.com/EdwardKHKim/vision_and_autonomous_surgical_movement
 catkin config --extend /path/to/dvrk_ws
 ```
+3. Install dependencies.
+```
+cd ~/vis_and_auto_mov_ws
+rosdep init
+rosdep install --from-path src --ignore-src -r -y
+```
+4. Build packages.
+```
+catkin build
+```
+
+#### Running Vision Node 
+#### Running Autonomous Movement Node
