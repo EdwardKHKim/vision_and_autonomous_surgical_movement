@@ -21,3 +21,5 @@ The vision node is dependent on the OpenCV (Open Source Computer Vision Library)
 2. Copy the `libsimExtROSInterface.so` file from the `compiledRosPlugins` folder to the root CoppeliaSim Folder.
 
 This system uses `dVRK-training_pick&place.ttt` scene provided in [dvrk-vrep](https://github.com/unina-icaros/dvrk-vrep). The scene is readily available in CoppeliaSim. 
+
+#### Vision and Autonomous Surgical Movement
