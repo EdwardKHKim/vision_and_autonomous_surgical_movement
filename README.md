@@ -68,7 +68,7 @@ cd /path/to/coppeliasim/root
 ```
 3. Complete the following steps in CoppeliaSim: File &#8594; Open scene &#8594; `dvrk-vrep` &#8594; `V-REP_scenes` &#8594; `dVRK-training_pick&place.ttt`
 4. Click Start/resume simulation.
-5. In a new terminal, run `image_flipper.py`
+5. In a new terminal, run `image_flipper.py` that converts the image messages to ROS conventions.
 ```
 cd 
 cd vis_and_auto_mov_ws
@@ -84,5 +84,40 @@ rosrun featurization vision.py
 ```
 7. A new window will appear with 
 ## Autonomous Movement Node
-
+The pipeline
+The following are the steps to run the autonomous movement node in the system. A new terminal can be a new terminal tab or window.
+1. In terminal, roscore can be launched using the roscore executable:
+```
+roscore
+```
+2. In a new terminal, launch CoppeliaSim
+```
+cd /path/to/coppeliasim/root
+./coppeliaSim.sh 
+```
+3. Complete the following steps in CoppeliaSim: File &#8594; Open scene &#8594; `dvrk-vrep` &#8594; `V-REP_scenes` &#8594; `dVRK-training_pick&place.ttt`
+4. Click Start/resume simulation.
+5. In a new terminal, run the dVRK console. 
+```
+cd
+cd vis_and_auto_mov_ws
+source devel/setup.bash
+rosrun dvrk_robot dvrk_console_json -j console-PSM1_KIN_SIMULATED.json
+```
+6. The dVRK console will appear. Select _Direct Controle_. The arms can be set to any values using the _Desired position (deg)_ fields. For this system, leave the joint values as:
+- _PSM1_: 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0
+7. In a new terminal, run `image_flipper.py` that converts the image messages to ROS conventions.
+```
+cd 
+cd vis_and_auto_mov_ws
+source devel/setup.bash
+rosrun simulation image_flipper.py
+```
+8. In a new terminal, run the autonomous movement node.
+```
+cd
+cd vis_and_auto_mov_ws
+source devel/setup.bash
+rosrun ecm_controller movement.py
+```
 ## Todo
