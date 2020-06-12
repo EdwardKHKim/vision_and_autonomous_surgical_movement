@@ -57,8 +57,8 @@ catkin build
 #### What does this node do?
 The node is responsible for publishing Cartesian Coordinates in 2D of the centroid point of the object of interest.
 #### Function specifications
-- `__init__(self, hsv_ranges, desired_viewpoint)`
-- `PrepareImage(self, ros_image)` is responsible for 
+- `__init__(self, hsv_ranges, desired_viewpoint)`:
+- `PrepareImage(self, ros_image)`: This function is 
 - `FindContours(self, hsv, lower_range, upper_range)`:
 - `PublishPoints(self, frame, points, point_type)`:
 - `Centroids(self, ros_image, name)`:
