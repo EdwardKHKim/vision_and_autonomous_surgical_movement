@@ -55,7 +55,8 @@ catkin build
 ```
 
 ## Vision Node 
-The pipeline 
+The node 
+#### Running Vision Node
 The following are the steps to run the vision node in the system. A new terminal can be a new terminal tab or window.
 1. In terminal, roscore can be launched using the roscore executable:
 ```
@@ -84,8 +85,9 @@ rosrun featurization vision.py
 ```
 7. A new window will appear with 
 ## Autonomous Movement Node
-The pipeline
-The following are the steps to run the autonomous movement node in the system. A new terminal can be a new terminal tab or window.
+The node 
+
+#### Running Autonomous Movement Node
 1. In terminal, roscore can be launched using the roscore executable:
 ```
 roscore
