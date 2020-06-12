@@ -39,7 +39,7 @@ catkin init
 2. Clone this repository into `vision_and_auto_mov_ws`.
 ```
 cd ~/vis_and_auto_mov_ws/src
-git clone https://github.com/EdwardKHKim/vision_and_autonomous_surgical_movement
+git clone https://github.com/EdwardKHKim/vision_and_autonomous_surgical_movement.git
 catkin config --extend /path/to/dvrk_ws
 ```
 3. Install dependencies.
