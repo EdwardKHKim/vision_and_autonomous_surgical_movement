@@ -128,5 +128,5 @@ rosrun ecm_controller movement.py
 ## Todo
 
 ## Troubleshooting
-- When using 
-- If there are any other questions related to the this repository, please contact me at edwardk.kim@hotmail.com 
+- When using a code editor (Visual Studio Code, IntelliJ IDEA...), error messages in import statements can be ignored.
+- If there are any questions or comments related to this repository, please contact me at edwardk.kim@hotmail.com.
