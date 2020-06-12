@@ -58,11 +58,11 @@ catkin build
 The node is responsible for publishing Cartesian Coordinates in 2D of the centroid point of the object of interest.
 #### Function specifications
 - `__init__(self, hsv_ranges, desired_viewpoint)`:
-- `PrepareImage(self, ros_image)`: This function is 
-- `FindContours(self, hsv, lower_range, upper_range)`:
-- `PublishPoints(self, frame, points, point_type)`:
-- `Centroids(self, ros_image, name)`:
-- `CSVToHSVRanges(features)`:
+- `PrepareImage(self, ros_image)`: This function is to 
+- `FindContours(self, hsv, lower_range, upper_range)`: This function is to 
+- `PublishPoints(self, frame, points, point_type)`: This function is to 
+- `Centroids(self, ros_image, name)`: This function is to calculate the Cartesian Coordinates in 2D of the centroid points of the object of interest. To do this, we use the 
+- `CSVToHSVRanges(features)`: This functions is to convert the values in the CSV file to the HSV value 
 #### Running Vision Node
 The following are the steps to run the vision node in the system. A new terminal can be a new terminal tab or window.
 1. In terminal, roscore can be launched using the roscore executable:
