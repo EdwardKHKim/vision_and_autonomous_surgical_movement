@@ -55,9 +55,10 @@ catkin build
 
 ## Vision Node 
 #### What does this node do?
-The node 
+The node is responsible for publishing Cartesian Coordinates in 2D of the centroid point of the object of interest.
 #### Function specifications
 - 
+
 #### Running Vision Node
 The following are the steps to run the vision node in the system. A new terminal can be a new terminal tab or window.
 1. In terminal, roscore can be launched using the roscore executable:
@@ -88,7 +89,7 @@ rosrun featurization vision.py
 7. A new window will appear with 
 ## Autonomous Movement Node
 #### What does this node do?
-The node 
+The node is responsible for automation of PSM1 movement to the object of interest, pick up the object of interest, and place it in another location using direct Cartesian Coordinates in 3D inputs.
 #### Function specifications
 - 
 #### Running Autonomous Movement Node
