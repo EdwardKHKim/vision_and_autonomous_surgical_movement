@@ -35,3 +35,9 @@ mkdir -p ~/vision_and_auto_mov_ws/src
 cd ~/vision_and_auto_mov_ws
 catkin init
 ```
+2. Clone this repository into `vision_and_auto_mov_ws`.
+```
+cd ~/vision_and_auto_mov_ws/src
+git clone 
+catkin config --extend /path/to/dvrk_ws
+```
