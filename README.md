@@ -126,6 +126,7 @@ source devel/setup.bash
 rosrun ecm_controller movement.py
 ```
 ## Todo
+- The autonomous movement node should subscribe to a transformation node that 
 
 ## Troubleshooting
 - When using a code editor (Visual Studio Code, IntelliJ IDEA...), error messages in import statements can be ignored.
