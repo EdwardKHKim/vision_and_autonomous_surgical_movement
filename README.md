@@ -56,17 +56,33 @@ catkin build
 
 ## Vision Node 
 The pipeline 
-The following are the steps to run the vision node in the system. Each step requires a new terminal tab or window.
-1. The roscore can be launched using the roscore executable:
+The following are the steps to run the vision node in the system. A new terminal can be a new terminal tab or window.
+1. In terminal, roscore can be launched using the roscore executable:
 ```
 roscore
 ```
-2. Launch CoppeliaSim
+2. In a new terminal, launch CoppeliaSim
 ```
 cd /path/to/coppeliasim/root
 ./coppeliaSim.sh 
 ```
-3. In CoppeliaSim: File &#8594;
+3. Complete the following steps in CoppeliaSim: File &#8594; Open scene &#8594; `dvrk-vrep` &#8594; `V-REP_scenes` &#8594; `dVRK-training_pick&place.ttt`
+4. Click Start/resume simulation.
+5. In a new terminal, run `image_flipper.py`
+```
+cd 
+cd vis_and_auto_mov_ws
+source devel/setup.bash
+rosrun simulation image_flipper.py
+```
+6. In a new terminal, run the vision node 
+```
+cd 
+cd vis_and_auto_mov_ws
+source devel/setup.bash
+rosrun featurization vision.py 
+```
+7. A new window will appear with 
 ## Autonomous Movement Node
 
 ## Todo
