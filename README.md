@@ -18,7 +18,7 @@ catkin init
 2. Download and compile the cisst libraries and SAW components for the dVRK, see the dVRK tutorial wiki: https://github.com/jhu-cisst/cisst/wiki/Compiling-cisst-and-SAW-with-CMake#13-building-using-catkin-build-tools-for-ros
 3. Download and compile dvrk-ros: https://github.com/jhu-dvrk/sawIntuitiveResearchKit/wiki/CatkinBuild
 
-ROS has multiple releases (Hydro, Indigo, Jade...), however, Melodic is the only release that works on macOS machines. 
+ROS has multiple releases (Hydro, Indigo, Jade...). Use the Melodic release.  
 
 #### OpenCV 
 The vision node is dependent on the OpenCV (Open Source Computer Vision Library), an open source software library for computer vision and machine learning. 
