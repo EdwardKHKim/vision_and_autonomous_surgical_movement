@@ -57,7 +57,7 @@ catkin build
 #### What does this node do?
 The node is responsible for publishing Cartesian Coordinates in 2D of the centroid point of the object of interest.
 #### Function specifications
-- `__init__(self, hsv_ranges, desired_viewpoint)`:
+- `__init__(self, hsv_ranges, desired_viewpoint)`: This function is to initiallize all the necessary variables for the class. 
 
 - `PrepareImage(self, ros_image)`: This function is to 
 
@@ -65,7 +65,7 @@ The node is responsible for publishing Cartesian Coordinates in 2D of the centro
 
 - `PublishPoints(self, frame, points, point_type)`: This function is to 
 
-- `Centroids(self, ros_image, name)`: This function is to calculate the Cartesian Coordinates in 2D of the centroid points of the object of interest. To do this, we use the 
+- `Centroids(self, ros_image, name)`: This function is to calculate the Cartesian Coordinates in 2D of the centroid points of the object of interest. We use the particular weighted average (moments) of the pixel intensities for the area bound by the countour lines to calculate the determine the centroid point. To perform this task, the OpenCV 
 
 - `CSVToHSVRanges(features)`: This functions is to convert the values in the CSV file to the HSV value 
 #### Running Vision Node
