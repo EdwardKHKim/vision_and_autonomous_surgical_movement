@@ -3,6 +3,8 @@ The repository contains algorithms in Python 2.0, split into two nodes. The visi
 
 ![System Overview](images/system.png)
 
+The diagram is an overview including the transformation node which is not included in this repository. The transformation node will be located in a separate repository. 
+
 ## Computer Pre-Check 
 The following repository is dependent on components that only work on Ubuntu. If your machine is running on macOS, download [Virtual Machine](https://www.virtualbox.org/) and [Ubuntu](https://ubuntu.com/download/desktop). If the speed of Ubuntu is slow, you need to allocate more RAM. 
 
