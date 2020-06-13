@@ -5,7 +5,7 @@ The repository contains algorithms in Python 2.0, split into two nodes. The visi
 The following repository is dependent on components that only work on Ubuntu. If your machine is running on macOS, download [Virtual Machine](https://www.virtualbox.org/) and [Ubuntu](https://ubuntu.com/download/desktop). If the speed of Ubuntu is slow, you need to allocate more RAM. 
 
 ## Development Requirements
-We use the catkin build tools, NOT catkin_make. Please don't use catkin_make
+We use the catkin build tools, NOT catkin_make. Please don't use catkin_make.
 
 #### DVRK Components 
 1. Create and initialize catkin workspace named `dvrk_ws`.
@@ -59,15 +59,15 @@ The node is responsible for publishing Cartesian Coordinates in 2D of the centro
 #### Function specifications
 - `__init__(self, hsv_ranges, desired_viewpoint)`: This function is to initiallize all the necessary variables for the class. 
 
-- `PrepareImage(self, ros_image)`: This function is to 
+- `PrepareImage(self, ros_image)`: This function is to prepare 
 
-- `FindContours(self, hsv, lower_range, upper_range)`: This function is to 
+- `FindContours(self, hsv, lower_range, upper_range)`: This function is to draw a contour line around the object of interest. 
 
-- `PublishPoints(self, frame, points, point_type)`: This function is to 
+- `PublishPoints(self, frame, points, point_type)`: This function is to publish the Cartesian Coordinates in 2D as an output value. The output is shown in terminal. 
 
 - `Centroids(self, ros_image, name)`: This function is to calculate the Cartesian Coordinates in 2D of the centroid points of the object of interest. We use the particular weighted average `moments` of the pixel intensities for the area bound by the countour lines to calculate the determine the centroid point. The OpenCV library includes the [moments function](https://docs.opencv.org/2.4/modules/imgproc/doc/structural_analysis_and_shape_descriptors.html?highlight=moments#moments). 
 
-- `CSVToHSVRanges(features)`: This functions is to convert the values in the CSV file to the HSV value 
+- `CSVToHSVRanges(features)`: This functions is to convert the values in the CSV file to the HSV value. The CSV file used in this class is `d`. The current values in the CSV file is set to recognize ranges that are shades of red, but other shades can be recognized by changing the ranges in the CSV file. 
 #### Running Vision Node
 The following are the steps to run the vision node in the system. A new terminal can be a new terminal tab or window.
 1. In terminal, roscore can be launched using the roscore executable:
