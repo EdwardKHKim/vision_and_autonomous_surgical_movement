@@ -71,7 +71,7 @@ The node is responsible for publishing Cartesian Coordinates in 2D of the centro
 
 - `Centroids(self, ros_image, name)`: This function is to calculate the Cartesian Coordinates in 2D of the centroid points of the object of interest. We use the particular weighted average `moments` of the pixel intensities for the area bound by the countour lines to calculate the determine the centroid point. The OpenCV library includes the [moments function](https://docs.opencv.org/2.4/modules/imgproc/doc/structural_analysis_and_shape_descriptors.html?highlight=moments#moments). 
 
-- `CSVToHSVRanges(features)`: This functions is to convert the values in the CSV file to the HSV value. The CSV file used in this class is `d`. The current values in the CSV file is set to recognize ranges that are shades of red, but other shades can be recognized by changing the ranges in the CSV file. 
+- `CSVToHSVRanges(features)`: This functions is to convert the values in the CSV file to the HSV value. The CSV file used in this class is `red_ball.csv`. The current values in the CSV file is set to recognize ranges that are shades of red, but other shades can be recognized by changing the ranges in the CSV file or adding additional CSV files and changing the default path. 
 #### Running Vision Node
 The following are the steps to run the vision node in the system. A new terminal can be a new terminal tab or window.
 1. In terminal, roscore can be launched using the roscore executable:
