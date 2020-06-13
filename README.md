@@ -99,7 +99,7 @@ cd vis_and_auto_mov_ws
 source devel/setup.bash
 rosrun featurization vision.py 
 ```
-7. A new window will appear with 
+7. A new window will appear with an image feed that show a black contour line drawn on the object of interest and the centroid point of the object of interest as a black dot. The live feed of the Cartesian Coordinates in 2D of the centroid point can be seen in terminal.
 ## Autonomous Movement Node
 #### What does this node do?
 The node is responsible for automation of PSM1 movement to the object of interest, pick up the object of interest, and place it in another location using direct Cartesian Coordinates in 3D inputs.
@@ -148,7 +148,10 @@ cd vis_and_auto_mov_ws
 source devel/setup.bash
 rosrun ecm_controller movement.py
 ```
-9. In CoppeliaSim, the PSM1 arm will 
+9. In CoppeliaSim, the PSM1 arm will move to the object of interest. Grasp the object and let go of the object in another desired location. Sometimes, the object of interest will not be grasped. This seems to be an error in CoppeliaSim. However, at the minimum you can will be able to see the following movements in order:
+
+PSM1 moves to the first indicated Cartesian Coordinate &#8594; Open jaw &#8594; Close jaw &#8594; PSM1 moves to the second indicated Caresian Coordinate &#8594; Open jaw.
+
 ## Todo
 - The autonomous movement node should subscribe to a transformation node that transforms the Cartesian Coordinates in 2D from the vision node to Cartesian Coordinates in 3D.
 
