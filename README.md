@@ -61,9 +61,9 @@ catkin build
 #### What does this node do?
 The node is responsible for publishing Cartesian Coordinates in 2D of the centroid point of the object of interest.
 #### Function specifications
-- `__init__(self, hsv_ranges, desired_viewpoint)`: This function is to initiallize all the necessary variables for the class. 
+- `__init__(self, hsv_ranges, desired_viewpoint)`: This function is to initiallize all the necessary variables for the class. This is where also the [publisher](http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28python%29) that broadcast messages and `CvBridge()` that allows ROS image messages to OpenCV messages conversion are initialized. 
 
-- `PrepareImage(self, ros_image)`: This function is to prepare 
+- `PrepareImage(self, ros_image)`: This function is actually convert ROS messages to OpenCV image messages.
 
 - `FindContours(self, hsv, lower_range, upper_range)`: This function is to draw a contour line around the object of interest. 
 
@@ -104,15 +104,15 @@ rosrun featurization vision.py
 #### What does this node do?
 The node is responsible for automation of PSM1 movement to the object of interest, pick up the object of interest, and place it in another location using direct Cartesian Coordinates in 3D inputs.
 #### Function specifications
-- `configure(self, robot_name)`:
+- `configure(self, robot_name)`: This function is to intialize the robot arm. For this repository the `robot_name = PSM1`.
 
-- `home(self)`:
+- `home(self)`: This function is to home the function. The third joint is set to 0.12, which is the default home setting. 
 
-- `cartesian_move(self, value_x, value_y, value_z)`:
+- `cartesian_move(self, value_x, value_y, value_z)`: This function is to allow the user to directly input the Cartesian Coordinates of the object of interest. The function automatically calculates the detal values of current joint position and the position of the object of interest. Then, uses the `dmove` command to move the the specified cartesian coordinates. 
 
-- `open_jaw_ungrasp(self)`:
+- `open_jaw_ungrasp(self)`: This function is to ungrasp the object of interest. 
 
-- `close_jaw_grasp(self)`:
+- `close_jaw_grasp(self)`: This function is to grasp the object of interest. 
 #### Running Autonomous Movement Node
 1. In terminal, roscore can be launched using the roscore executable:
 ```
@@ -146,7 +146,7 @@ rosrun simulation image_flipper.py
 cd
 cd vis_and_auto_mov_ws
 source devel/setup.bash
-rosrun ecm_controller movement.py
+rosrun ecm_controller movement.py 'PSM1'
 ```
 9. In CoppeliaSim, the PSM1 arm will move to the object of interest. Grasp the object and let go of the object in another desired location. Sometimes, the object of interest will not be grasped. This seems to be an error in CoppeliaSim. However, at the minimum you can will be able to see the following movements in order: PSM1 moves to the first indicated Cartesian Coordinate &#8594; Open jaw &#8594; Close jaw &#8594; PSM1 moves to the second indicated Caresian Coordinate &#8594; Open jaw.
 
