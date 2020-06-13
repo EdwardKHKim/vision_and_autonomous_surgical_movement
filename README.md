@@ -108,7 +108,7 @@ The node is responsible for automation of PSM1 movement to the object of interes
 
 - `home(self)`: This function is to home the function. The third joint is set to 0.12, which is the default home setting. 
 
-- `cartesian_move(self, value_x, value_y, value_z)`: This function is to allow the user to directly input the Cartesian Coordinates of the object of interest. The function automatically calculates the detal values of current joint position and the position of the object of interest. Then, uses the `dmove` command to move the the specified cartesian coordinates. 
+- `cartesian_move(self, value_x, value_y, value_z)`: This function is to allow the user to directly input the Cartesian Coordinates of the object of interest. The function automatically calculates the delta values of current joint position and the position of the object of interest. Then, uses the `dmove` command to move the the specified cartesian coordinates. 
 
 - `open_jaw_ungrasp(self)`: This function is to ungrasp the object of interest. 
 
