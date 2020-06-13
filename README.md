@@ -63,7 +63,7 @@ The node is responsible for publishing Cartesian Coordinates in 2D of the centro
 #### Function specifications
 - `__init__(self, hsv_ranges, desired_viewpoint)`: This function is to initiallize all the necessary variables for the class. This is where also the [publisher](http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28python%29) that broadcast messages and `CvBridge()` that allows ROS image messages to OpenCV messages conversion are initialized. 
 
-- `PrepareImage(self, ros_image)`: This function is actually convert ROS messages to OpenCV image messages.
+- `PrepareImage(self, ros_image)`: This function is to convert ROS messages to OpenCV image messages.
 
 - `FindContours(self, hsv, lower_range, upper_range)`: This function is to draw a contour line around the object of interest. 
 
