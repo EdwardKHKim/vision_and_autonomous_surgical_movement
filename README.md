@@ -61,7 +61,7 @@ catkin build
 #### What does this node do?
 The node is responsible for publishing Cartesian Coordinates in 2D of the centroid point of the object of interest.
 #### Function specifications
-- `__init__(self, hsv_ranges, desired_viewpoint)`: This function is to initiallize all the necessary variables for the class. This is where also the [publisher](http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28python%29) that broadcast messages and `CvBridge()` that allows ROS image messages to OpenCV messages conversion are initialized. 
+- `__init__(self, hsv_ranges, desired_viewpoint)`: This function is to initiallize all the necessary variables for the class. This is where also the [publisher](http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28python%29) that broadcast messages and `CvBridge()` that allows ROS image messages to OpenCV messages conversion are initialized. You can learn more about CvBridge [here](http://wiki.ros.org/cv_bridge).
 
 - `PrepareImage(self, ros_image)`: This function is to convert ROS messages to OpenCV image messages.
 
