@@ -147,7 +147,7 @@ rosrun simulation image_flipper.py
 cd
 cd vis_and_auto_mov_ws
 source devel/setup.bash
-rosrun ecm_controller movement.py 'PSM1'
+rosrun auto_movement movement.py 'PSM1'
 ```
 9. In CoppeliaSim, the PSM1 arm will move to the object of interest. Grasp the object and let go of the object in another desired location. Sometimes, the object of interest will not be grasped. This seems to be an error in CoppeliaSim. However, at the minimum you can will be able to see the following movements in order: PSM1 moves to the first indicated Cartesian Coordinate &#8594; Open jaw &#8594; Close jaw &#8594; PSM1 moves to the second indicated Caresian Coordinate &#8594; Open jaw.
 
