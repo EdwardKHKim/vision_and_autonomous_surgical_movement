@@ -130,6 +130,7 @@ cd /path/to/coppeliasim/root
 cd
 cd vis_and_auto_mov_ws
 source devel/setup.bash
+cd src/simulation/config
 rosrun dvrk_robot dvrk_console_json -j console-PSM1_KIN_SIMULATED.json
 ```
 6. The dVRK console will appear. Select _Direct Controle_. The arms can be set to any values using the _Desired position (deg)_ fields. For this system, leave the joint values as:
