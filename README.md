@@ -56,7 +56,7 @@ rosdep install --from-path src --ignore-src -r -y
 ```
 catkin build
 ```
-
+5. If catkin build fails, install all other dependencies you may be missing according to terminal output. 
 ## Vision Node 
 #### What does this node do?
 The node is responsible for publishing Cartesian Coordinates in 2D of the centroid point of the object of interest.
