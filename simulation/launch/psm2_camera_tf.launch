@@ -1,0 +1,4 @@
+<launch>
+  <!-- This launches a static transform between the ECM and the camera frame in simulation -->
+  <node pkg="tf" type="static_transform_publisher" name="PSM2" args="0 0 0 3.14159 0 0 PSM2 camera 20" />
+</launch>
