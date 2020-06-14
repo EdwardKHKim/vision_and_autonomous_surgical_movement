@@ -153,6 +153,7 @@ rosrun auto_movement movement.py 'PSM1'
 
 ## Todo
 - The autonomous movement node should subscribe to a transformation node that transforms the Cartesian Coordinates in 2D from the vision node to Cartesian Coordinates in 3D.
+- The Cartesian Cooridnates in 3D of the object of interest by CoppeliaSim is not accurate. Therefore, the transformation node needs to provide a more accurate 3D Cartesian Coordinate. 
 
 ## Troubleshooting
 - When using a code editor (Visual Studio Code, IntelliJ IDEA...), error messages in import statements can be ignored.
