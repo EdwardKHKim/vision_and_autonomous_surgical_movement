@@ -5,7 +5,8 @@ The repository contains algorithms in Python 2.0, split into two nodes. The visi
 
 The diagram is an overview including the transformation node which is not included in this repository. The transformation node will be located in a separate repository. The autonomous movement node included in this repository is dependent on the user to provide the direct cartesian coordinates of the object of interest. 
 
-The following are the technical documents for [Vision Node](https://www.overleaf.com/read/gmbcphkfvpsn) and [Autonomous Movement Node]() present in this repository in latex. To have access to edit the document please email me to the email address at the end of README.md.  
+The following are the technical documents for [Vision Node](https://www.overleaf.com/read/gmbcphkfvpsn) and [Autonomous Movement Node](https://www.overleaf.com/read/pwnnjsmgdwcd) present in this repository, in Search Results
+Web results LaTeX. To have access to edit the document please email me to the email address at the end of README.md.  
 
 ## Computer Pre-Check 
 The following repository is dependent on components that only work on Ubuntu. If your machine is running on macOS, download [Virtual Machine](https://www.virtualbox.org/) and [Ubuntu](https://ubuntu.com/download/desktop). If the speed of Ubuntu is slow, you need to allocate more RAM. 
