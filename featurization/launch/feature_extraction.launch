@@ -1,0 +1,8 @@
+<launch>
+  <node pkg="featurization" type="feature_extraction.py" name="featurization_left" output = "screen"/>
+
+  <node pkg="featurization" type="feature_extraction.py" name="featurization_right"  output = "screen">
+    <remap from="/stereo/left/image_flipped" to = "stereo/right/image_flipped" />
+    <remap from="/featurization/left/feature_points" to = "/featurization/right/feature_points" />
+  </node>
+</launch>
